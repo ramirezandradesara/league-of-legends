@@ -9,4 +9,4 @@ export const getChamps = async () => {
     } catch (error) {
         console.log(error);
     }
-}
+};

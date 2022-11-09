@@ -1,0 +1,1 @@
+export const favsReducer: string = 'hola';
