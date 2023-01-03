@@ -1,17 +1,11 @@
-// import { LocalStorageTypes, Person } from '@/models';
-// import { getLocalStorage, setLocalStorage } from '@/utilities';
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit'
 
-// const initialState: [] = [];
 
-export interface IFavs {
-  id: string
-}
 
 export const favoritesSlice = createSlice({
   name: 'favorites',
-  initialState: [] as IFavs[],
+  initialState: [],
   reducers: {
     addFavorite: (state, action) => {
       return [...state, action.payload]

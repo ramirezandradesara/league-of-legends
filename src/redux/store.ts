@@ -1,15 +1,21 @@
 // import { Person } from '@/models';
 import { configureStore } from '@reduxjs/toolkit';
-import { favoritesSlice, IFavs, peopleSlice } from './states';
+import { useDispatch } from 'react-redux';
+import { IChamps } from '../types/champs.types';
+import { IFavs } from '../types/favs.types';
+import { favoritesSlice, champSlice } from './states';
 
 export interface AppStore {
-  people: [];
+  champs: IChamps[];
   favorites: IFavs[];
 }
 
-export default configureStore<AppStore>({
+export const store = configureStore<AppStore>({
   reducer: {
-    people: peopleSlice.reducer,
+    champs: champSlice.reducer,
     favorites: favoritesSlice.reducer
   }
 });
+
+export type AppDispatch = typeof store.dispatch
+export const useAppDispatch: () => AppDispatch = useDispatch

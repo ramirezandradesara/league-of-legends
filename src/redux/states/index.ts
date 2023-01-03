@@ -1,2 +1,2 @@
 export * from './favorites';
-export * from './people';
+export * from './champs';

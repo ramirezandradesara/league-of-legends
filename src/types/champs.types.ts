@@ -1,7 +1,7 @@
-interface Champs {
-    id: number;
+export interface IChamps {
+    id: string;
+    title: string;
     name: string;
     image: string;
 }
 
-export default Champs; 

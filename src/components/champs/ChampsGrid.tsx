@@ -1,35 +1,39 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { getChamps } from '../../service/getChamps'
-import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux';
-import { addFavorite } from '../../redux/states';
-import { AppStore } from '../../redux/store';
+import { addFavorite, setChamps } from '../../redux/states';
+import { AppDispatch, AppStore } from '../../redux/store';
+
 
 function ChampsGrid() {
-  const dispatch = useDispatch();
-  const [champs, setChamps] = useState([])
+  const dispatch = useDispatch<AppDispatch>();
+  // const favorites = useSelector((state: AppStore) => state.favorites)
+  const champs = useSelector((state: AppStore) => state.champs)
 
-  const favoritos = useSelector((state: AppStore) => state.favorites)
-  console.log("🚀 ~ file: ChampsGrid.tsx:13 ~ ChampsGrid ~ favoritos", favoritos)
-
+  /**
+   * When the components renders, it gets the champions of the API and set them in the champs state
+   */
   useEffect(() => {
-    getChamps().then(data => setChamps(Object.values(data)))
-  }, [])
-
-  const handleFav = (id: string) => {
-    dispatch(addFavorite(id));
-  }
+    getChamps().then(data => dispatch(setChamps(Object.values(data))))
+  }, [dispatch])
 
   return (
     <>
       <div>ChampsGrid</div>
       <div>
-        {champs?.map(c => {
+        {champs.map(c => {
           return (
             <div key={c.id}>
+              <img
+                src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${c.id}_0.jpg`}
+                alt="" />
               <span>{c.id}, </span>
               <span>{c.title}</span>
-              <button onClick={() => handleFav(c.id)}>Fav</button>
+              <button
+                onClick={() => dispatch(addFavorite(c.id))}
+              >
+                Fav
+              </button>
               <br />
             </div>
           )
