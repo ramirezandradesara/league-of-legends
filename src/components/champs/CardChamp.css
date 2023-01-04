@@ -1,0 +1,20 @@
+.card-champ{
+    width: 150px;
+    height: 80px;
+    background-color: yellow;
+    -ms-transform: skewY(-20deg); /* IE 9 */
+    transform: skewY(-20deg);
+
+}
+
+.card-champ-content{
+    /* width: 150px; */
+    /* height: 80px; */
+    /* background-color: yellow; */
+    -ms-transform: skewY(20deg); /* IE 9 */
+    transform: skewY(20deg);
+}
+
+.card-champ-img{
+    
+}

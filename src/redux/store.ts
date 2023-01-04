@@ -1,4 +1,3 @@
-// import { Person } from '@/models';
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 import { IChamps } from '../types/champs.types';

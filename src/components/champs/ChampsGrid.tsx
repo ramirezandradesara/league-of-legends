@@ -3,11 +3,11 @@ import { getChamps } from '../../service/getChamps'
 import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite, setChamps } from '../../redux/states';
 import { AppDispatch, AppStore } from '../../redux/store';
+import CardChamp from './CardChamp';
 
 
 function ChampsGrid() {
   const dispatch = useDispatch<AppDispatch>();
-  // const favorites = useSelector((state: AppStore) => state.favorites)
   const champs = useSelector((state: AppStore) => state.champs)
 
   /**
@@ -23,19 +23,12 @@ function ChampsGrid() {
       <div>
         {champs.map(c => {
           return (
-            <div key={c.id}>
-              <img
-                src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${c.id}_0.jpg`}
-                alt="" />
-              <span>{c.id}, </span>
-              <span>{c.title}</span>
-              <button
-                onClick={() => dispatch(addFavorite(c.id))}
-              >
-                Fav
-              </button>
-              <br />
-            </div>
+            <CardChamp
+              key={c.id}
+              id={c.id}
+              image={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${c.id}_0.jpg`}
+              title={c.title}
+            />
           )
         })}
       </div>
