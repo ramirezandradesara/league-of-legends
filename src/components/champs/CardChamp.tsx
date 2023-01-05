@@ -1,27 +1,28 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addFavorite } from '../../redux/states'
-import { AppDispatch, AppStore } from '../../redux/store'
+import { AppDispatch } from '../../redux/store'
 import { IChamps } from '../../types/champs.types'
-// import './CardChamp.css'
+import './CardChamp.css'
 
 function CardChamp({ id, image, title }: IChamps) {
 
     const dispatch = useDispatch<AppDispatch>();
 
     return (
-        <>
-            <div key={id} className="card-champ">
+        <div className='clippy'>
 
-                <div className="card-champ-content" >
-                    <div>{id}</div>
-                    <div className='card-champ-img'></div>
-                    <button onClick={() => dispatch(addFavorite(id))} >
-                        (L)
-                    </button>
-                </div>
+            <div key={id} className="">
+                {/* <div className='card-champ-img'
+                    style={{ backgroundImage: `url('${image}')` }}
+                >
+                </div> */}
+                <div className='card-champ-id name'>{id}, </div>
+                <div className='card-champ-id title'> {title}</div>
+                <img src={image} alt={image} />
+                <div className="border"></div>
             </div>
-        </>
+        </div>
     )
 }
 
