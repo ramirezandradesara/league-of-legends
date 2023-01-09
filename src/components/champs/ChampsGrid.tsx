@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite, setChamps } from '../../redux/states';
 import { AppDispatch, AppStore } from '../../redux/store';
 import CardChamp from './CardChamp';
-
+import './ChampsGrid.css'
 
 function ChampsGrid() {
   const dispatch = useDispatch<AppDispatch>();
@@ -19,16 +19,16 @@ function ChampsGrid() {
 
   return (
     <>
-      <div>ChampsGrid</div>
-      <div>
+        <div className="container">
         {champs.map(c => {
           return (
+              
             <CardChamp
               key={c.id}
               id={c.id}
               image={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${c.id}_0.jpg`}
               title={c.title}
-            />
+              />
           )
         })}
       </div>
