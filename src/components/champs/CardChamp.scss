@@ -12,8 +12,6 @@
     border-radius: 10px;
     position: relative;
     clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
-    z-index: 10;
-    // clip-path: polygon(12% 0, 100% 0, 88% 100%, 0% 100%);
 
     &_link {
         width: 100%;
@@ -22,13 +20,12 @@
 
     &_img {
         width: auto;
-        height: 450px;
+        height: 350px;
         object-fit: cover;
         overflow: hidden;
         position: relative;
         z-index: 10;
         // transform: scale(1.2);
-        // outline: 5px solid rgb(86, 78, 155);
         border-radius: 5px;
 
         img {
@@ -41,23 +38,15 @@
 
     .fav-icon {
         position: absolute;
-        font-size: 38px;
+        font-size: 30px;
         top: 10px;
         right: 15px;
     }
 
-    .arrow-icon {
-        position: absolute;
-        font-size: 38px;
-        top: 20px;
-        left: 22px;
-    }
-
-
     &_info {
         width: 100%;  
         background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-        height: 110px;
+        height: 90px;
         position: absolute;
         bottom: 0px;
         left: 0px;
@@ -69,13 +58,14 @@
             font-family: "beaufortforlol", cursive;
             font-style: italic;
             letter-spacing: 1px;
-            font-size: 25px;
+            font-size: 20px;
             text-transform: uppercase;
         }
 
         &_title {
             font-family: "beaufortforlol", cursive;
             margin-top: 5px;
+            font-size: 13px;
             margin-bottom: 8px;
         }
 
@@ -107,7 +97,7 @@
     }
 
     .card_champ_info_tags {
-        width: 70%;
+        width: 75%;
         display: flex;
         flex-direction: row;
         justify-content: center;
