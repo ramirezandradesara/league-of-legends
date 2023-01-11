@@ -19,16 +19,15 @@ function ChampsGrid() {
 
   return (
     <>
-        <div className="container">
+      <div className="container">
         {champs.map(c => {
           return (
-              
             <CardChamp
               key={c.id}
               id={c.id}
               image={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${c.id}_0.jpg`}
               title={c.title}
-              />
+            />
           )
         })}
       </div>
