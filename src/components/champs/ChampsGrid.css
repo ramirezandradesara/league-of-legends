@@ -8,9 +8,9 @@
   max-width: 100%;
   max-height: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 55px;
-  grid-row-gap: 130px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 80px;
 
   /* background-color: #1E2234;
   min-height: 100vh;

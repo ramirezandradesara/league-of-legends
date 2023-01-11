@@ -5,6 +5,7 @@ import { addFavorite } from '../../redux/states'
 import { AppDispatch } from '../../redux/store'
 import { IChamps } from '../../types/champs.types'
 import './CardChamp.scss'
+import { AiOutlineHeart } from 'react-icons/ai'
 
 function CardChamp({ id, image, title }: IChamps) {
 
@@ -17,10 +18,13 @@ function CardChamp({ id, image, title }: IChamps) {
                 <div className='card_champ_img'>
                     <img src={image} alt={image} />
 
+                    <AiOutlineHeart className='fav-icon'/>
+
                     <div className='card_champ_info'>
                         <div className='card_champ_info_name'>{id},</div>
                         <div className='card_champ_info_title'> {title}</div>
                     </div>
+
                 </div>
             </Link>
         </div>
