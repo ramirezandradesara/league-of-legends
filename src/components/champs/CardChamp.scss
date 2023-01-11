@@ -1,81 +1,97 @@
 @font-face {
     font-family: "beaufortforlol";
     src: url("../../assets//fonts/BeaufortforLOLBold.ttf");
-    // src: url("../../assets//fonts/BeaufortforLOL-Regular.ttf");
 }
 
 @font-face {
     font-family: "lolregular";
-    // src: url("../../assets//fonts/BeaufortforLOLBold.ttf");
     src: url("../../assets//fonts/BeaufortforLOL-Regular.ttf");
 }
 
 .card_champ {
-    // width: 200px;
-    height: 450px;
     border-radius: 10px;
     position: relative;
+    clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
+
 
     &_link {
         width: 100%;
         height: 100%;
-        position: relative;
-        outline: 1px rgb(103,89,232);
     }
 
     &_img {
-        width: 100%;
-        height: 100%;
+        width: auto;
+        height: 450px;
         object-fit: cover;
-        // position: relative;        
-        transform: scale(1.0);
+        overflow: hidden;
+        position: relative;
+        z-index: 10;
+        // transform: scale(1.2);
+        // outline: 5px solid rgb(86, 78, 155);
+        border-radius: 5px;
 
         img {
             width: 100%;
             height: 100%;
+            transition: all 500ms ease;
+            transform: scale(1.1);
         }
 
+        // img:hover{
+        //     transform: scale(1.2);
+        // }
     }
 
     .fav-icon {
         position: absolute;
         font-size: 38px;
-        top: 20px;
-        right: 22px;
+        top: 10px;
+        right: 15px;
     }
 
-    
+    .arrow-icon {
+        position: absolute;
+        font-size: 38px;
+        top: 20px;
+        left: 22px;
+    }
+
+ 
     &_info {
         width: 100%;
         font-family: "beaufortforlol", cursive;
-        // background: black;
         background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-        // background: linear-gradient(0deg, rgba(118,119,210,1) 0%, rgba(255,255,255,0) 100%);
-
         height: 100px;
         position: absolute;
         bottom: 0px;
         left: 0px;
         padding: 26px 0px 0px 22px;
+        transition: all 500ms ease;
 
-        &:hover{
-            background: rgb(103,89,232);
-            background: linear-gradient(0deg, rgba(103,89,232,1) 0%, rgba(255,255,255,0) 100%);
-        } 
-        
+
         &_name {
             font-family: "beaufortforlol", cursive;
             letter-spacing: 1px;
             font-size: 25px;
             text-transform: uppercase;
-
         }
 
         &_title {
-            // font-family: "lolregular", cursive;
             font-family: "beaufortforlol", cursive;
         }
     }
+}
 
+.card_champ:hover {
 
+    img:hover {
+        transform: scale(1.2);
+    }
+
+    .card_champ_info {
+        transition: all 500ms ease;
+
+        background: rgb(103, 89, 232);
+        background: linear-gradient(0deg, rgba(103, 89, 232, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    }
 }
