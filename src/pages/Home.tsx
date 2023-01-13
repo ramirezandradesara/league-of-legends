@@ -1,4 +1,4 @@
-import ChampsGrid from '../components/champs/ChampsGrid'
+import ChampsGrid from '../components/champs/Grid/ChampsGrid'
 import './Home.css'
 
 function Home() {

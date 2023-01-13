@@ -1,9 +1,9 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
-import { addFavorite } from '../../redux/states'
-import { AppDispatch } from '../../redux/store'
-import { IChamps } from '../../types/champs.types'
+import { addFavorite } from '../../../redux/states'
+import { AppDispatch } from '../../../redux/store'
+import { IChamps } from '../../../types/champs.types'
 import './CardChamp.scss'
 import { AiOutlineHeart } from 'react-icons/ai'
 import { BsFillArrowRightCircleFill } from 'react-icons/bs'
@@ -35,7 +35,8 @@ function CardChamp({ id, image, title, tags }: IChamps) {
                                 return (
                                     <img
                                         src={`/tags/${tag}.png`}
-                                        alt={`${tag}`}
+                                        alt={`${id + tag}`}
+                                        key={`${id + tag}`}
                                         title={`${tag}`}
                                     />
                                 )

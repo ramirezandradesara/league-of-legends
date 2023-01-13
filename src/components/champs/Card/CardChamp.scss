@@ -1,17 +1,17 @@
 @font-face {
-    font-family: "beaufortforlol";
-    src: url("../../assets/fonts/BeaufortforLOLBold.ttf");
+    font-family: "bold-lol";
+    src: url("../../../assets/fonts/BeaufortforLOLBold.ttf");
 }
 
 @font-face {
-    font-family: "lolregular";
-    src: url("../../assets//fonts/BeaufortforLOL-Regular.ttf");
+    font-family: "regular-lol";
+    src: url("../../../assets//fonts/BeaufortforLOL-Regular.ttf");
 }
 
 .card_champ {
     border-radius: 10px;
     position: relative;
-    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+    clip-path: polygon(8% 0, 100% 0, 92% 100%, 0% 100%);
 
     &_link {
         width: 100%;
@@ -24,9 +24,7 @@
         object-fit: cover;
         overflow: hidden;
         position: relative;
-        z-index: 10;
         // transform: scale(1.2);
-        border-radius: 5px;
 
         img {
             width: 100%;
@@ -46,16 +44,16 @@
     &_info {
         width: 100%;  
         background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-        height: 90px;
+        height: 27%;
         position: absolute;
         bottom: 0px;
         left: 0px;
-        padding: 26px 0px 0px 17px;
+        padding: 26px 0px 0px 15px;
         transition: all 500ms ease;
 
 
         &_name {
-            font-family: "beaufortforlol", cursive;
+            font-family: "bold-lol", cursive;
             font-style: italic;
             letter-spacing: 1px;
             font-size: 20px;
@@ -63,9 +61,9 @@
         }
 
         &_title {
-            font-family: "beaufortforlol", cursive;
+            font-family: "bold-lol", cursive;
             margin-top: 5px;
-            font-size: 13px;
+            font-size: 12.5px;
             margin-bottom: 8px;
         }
 
@@ -83,6 +81,7 @@
     }
 }
 
+
 .card_champ:hover {
 
     img{
@@ -93,7 +92,7 @@
         transition: all 500ms ease;
         background: rgb(103, 89, 232);
         background: linear-gradient(0deg, rgba(103, 89, 232, 1) 0%, rgba(255, 255, 255, 0) 100%);
-        padding: 0px 0px 0px 20px;
+        padding: 0px 0px 0px 15px;
     }
 
     .card_champ_info_tags {

@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react'
-import { getChamps } from '../../service/getChamps'
+import { getChamps } from '../../../service/getChamps'
 import { useDispatch, useSelector } from 'react-redux';
-import { addFavorite, setChamps } from '../../redux/states';
-import { AppDispatch, AppStore } from '../../redux/store';
-import CardChamp from './CardChamp';
+import { addFavorite, setChamps } from '../../../redux/states';
+import { AppDispatch, AppStore } from '../../../redux/store';
+import CardChamp from '../Card/CardChamp';
 import './ChampsGrid.css'
 
 function ChampsGrid() {
   const dispatch = useDispatch<AppDispatch>();
   const champs = useSelector((state: AppStore) => state.champs)
-  console.log("🚀 ~ file: ChampsGrid.tsx:12 ~ ChampsGrid ~ champs", champs)
 
   /**
    * When the components renders, it gets the champions of the API and set them in the champs state

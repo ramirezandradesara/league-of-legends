@@ -17,3 +17,24 @@ button {
 a {
   cursor: pointer;
 }
+
+
+::-webkit-scrollbar{
+  width: 1.1rem;
+  /* height: 2em;  for horizontal scrollbar*/
+}
+
+::-webkit-scrollbar-track{
+  background: #472f5e;
+  /* border-radius: 100vw; */
+  /* margin-block: .5em; */
+}
+
+::-webkit-scrollbar-thumb{
+  background: #8b68ac;
+  border: .25em solid #472f5e;
+  border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: #a297ac;
+}
