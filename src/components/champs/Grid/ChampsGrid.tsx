@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite, setChamps } from '../../../redux/states';
 import { AppDispatch, AppStore } from '../../../redux/store';
 import CardChamp from '../Card/CardChamp';
-import './ChampsGrid.css'
+import './ChampsGrid.scss'
 
 function ChampsGrid() {
   const dispatch = useDispatch<AppDispatch>();
@@ -19,7 +19,7 @@ function ChampsGrid() {
 
   return (
     <>
-      <div className="container">
+      <div className="champs_grid">
         {champs.map(c => {
           return (
             <CardChamp
