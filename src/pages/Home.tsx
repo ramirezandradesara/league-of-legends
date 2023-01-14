@@ -4,12 +4,9 @@ import './Home.css'
 function Home() {
 
   return (
-    <>
-      <div>home</div>
       <div className='home'>
         <ChampsGrid />
       </div>
-    </>
   )
 }
 
