@@ -9,6 +9,7 @@ import { AiOutlineHeart } from 'react-icons/ai'
 import { BsFillArrowRightCircleFill } from 'react-icons/bs'
 import { FaArrowCircleRight } from 'react-icons/fa'
 import { HiArrowCircleRight } from 'react-icons/hi'
+import Tooltip from '@mui/material/Tooltip';
 
 /**
  * Component that display the card with the information of the champion
@@ -17,7 +18,7 @@ function CardChamp({ id, image, title, tags }: IChamps) {
 
     const dispatch = useDispatch<AppDispatch>();
 
-    function splitName (name: string) {
+    function splitName(name: string) {
         return name.split(/(?=[A-Z])/).join(" ")
     }
 
@@ -33,12 +34,14 @@ function CardChamp({ id, image, title, tags }: IChamps) {
                         <div className='card_champ_info_tags'>
                             {tags.map(tag => {
                                 return (
-                                    <img
-                                        src={`/tags/${tag}.png`}
-                                        alt={`${id + tag}`}
-                                        key={`${id + tag}`}
-                                        title={`${tag}`}
-                                    />
+                                    <Tooltip  title={`${tag}`} arrow>
+                                        <img
+                                            src={`/tags/${tag}.png`}
+                                            alt={`${id + tag}`}
+                                            key={`${id + tag}`}
+                                            // title={`${tag}`}
+                                        />
+                                    </Tooltip>
                                 )
                             })}
                         </div>
