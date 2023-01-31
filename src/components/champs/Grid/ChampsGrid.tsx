@@ -12,6 +12,7 @@ function ChampsGrid() {
 
   /**
    * When the components renders, it gets the champions of the API and set them in the champs state
+   * @returns {JSX.Element} 
    */
   useEffect(() => {
     getChamps().then(data => dispatch(setChamps(Object.values(data))))

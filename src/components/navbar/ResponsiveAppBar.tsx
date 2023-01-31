@@ -14,6 +14,10 @@ import { useNavigate } from 'react-router-dom'
 
 const pages = ['favorites', 'summoners'];
 
+/**
+ * @returns {JSX.Element}
+ */
+
 function ResponsiveAppBar() {
 
     const navegador = useNavigate();
@@ -24,11 +28,8 @@ function ResponsiveAppBar() {
         setAnchorElNav(event.currentTarget);
     };
 
-    const handleCloseNavMenu = (page: string) => {
+    const handleCloseNavMenu = () => {
         setAnchorElNav(null);
-        // if (page !== null ){
-        //     navegador(`/${page}`)
-        // }
     };
 
     return (
@@ -39,8 +40,9 @@ function ResponsiveAppBar() {
                     <Typography
                         variant="h6"
                         noWrap
-                        component="a"
-                        href="/"
+                        // component="a"
+                        // href="/"
+                        onClick={() => navegador('/')}
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
@@ -49,6 +51,7 @@ function ResponsiveAppBar() {
                             letterSpacing: '.3rem',
                             color: 'inherit',
                             textDecoration: 'none',
+                            cursor: 'pointer'
                         }}>
                         PORO.GANK
                     </Typography>
@@ -65,30 +68,21 @@ function ResponsiveAppBar() {
                         <Menu
                             id="menu-appbar"
                             anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'left',
-                            }}
+                            anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
                             keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'left',
-                            }}
+                            transformOrigin={{ vertical: 'top', horizontal: 'left' }}
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
-                            sx={{
-                                backgroundColor: "#31385588",
-                                display: { xs: 'block', md: 'none' },
-                            }}>
+                            sx={{ backgroundColor: "#31385588", display: { xs: 'block', md: 'none' } }}>
                             {pages.map((page) => (
                                 <MenuItem
                                     sx={{ backgroundColor: "#1e2234", '&:hover': { backgroundColor: '#4a5483' } }}
                                     key={page}
-                                    onClick={() => handleCloseNavMenu(page)}>
+                                    onClick={() => { handleCloseNavMenu(); navegador(`/${page}`) }}>
                                     <Typography
                                         textAlign="center"
-                                        component="a"
-                                        href={`/${page}`}
+                                        // component="a"
+                                        // href={`/${page}`}
                                         sx={{
                                             fontFamily: "bold-lol",
                                             textTransform: 'capitalize',
@@ -101,7 +95,6 @@ function ResponsiveAppBar() {
                     </Box>
 
                     <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-                    {/* titulo mobile */}
                     <Typography
                         variant="h5"
                         noWrap
@@ -123,9 +116,9 @@ function ResponsiveAppBar() {
                         {pages.map((page) => (
                             <Button
                                 key={page}
-                                component="a"
-                                href={`/${page}`}
-                                onClick={() => handleCloseNavMenu(page)}
+                                // component="a"
+                                // href={`/${page}`}
+                                onClick={() => { handleCloseNavMenu(); navegador(`/${page}`) }}
                                 sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'bold-lol' }}>
                                 {page}
                             </Button>

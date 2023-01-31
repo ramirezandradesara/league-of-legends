@@ -6,13 +6,12 @@ import { AppDispatch } from '../../../redux/store'
 import { IChamps } from '../../../types/champs.types'
 import './CardChamp.scss'
 import { AiOutlineHeart } from 'react-icons/ai'
-import { BsFillArrowRightCircleFill } from 'react-icons/bs'
-import { FaArrowCircleRight } from 'react-icons/fa'
-import { HiArrowCircleRight } from 'react-icons/hi'
 import Tooltip from '@mui/material/Tooltip';
 
 /**
  * Component that display the card with the information of the champion
+ * @todo add to favs funcionality
+ * @returns {JSX.Element}
  */
 function CardChamp({ id, image, title, tags }: IChamps) {
 
@@ -34,7 +33,7 @@ function CardChamp({ id, image, title, tags }: IChamps) {
                         <div className='card_champ_info_tags'>
                             {tags.map(tag => {
                                 return (
-                                    <Tooltip  title={`${tag}`} arrow>
+                                    <Tooltip title={`${tag}`} arrow>
                                         <img
                                             src={`/tags/${tag}.png`}
                                             alt={`${id + tag}`}
