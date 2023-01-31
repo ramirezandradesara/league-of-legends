@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.scss';
 import ResponsiveAppBar from './components/navbar/ResponsiveAppBar';
-import Home from './pages/Home';
+import Home from './pages/home/Home';
 
 function App() {
   return (

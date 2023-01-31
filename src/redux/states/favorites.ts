@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, current } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit'
 
 export const favoritesSlice = createSlice({
@@ -9,7 +9,7 @@ export const favoritesSlice = createSlice({
       return [...state, action.payload]
     },
     removeFavorite: (state, action) => {
-      return action.payload;
+      return state.filter(favs => favs !== action.payload)
     }
   }
 });
