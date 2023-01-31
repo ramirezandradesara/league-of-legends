@@ -18,27 +18,42 @@ a {
   cursor: pointer;
 }
 
+@font-face {
+  font-family: "bold-lol";
+  src: url("./assets/fonts/BeaufortforLOLBold.ttf");
+}
+
+@font-face {
+  font-family: "regular-lol";
+  src: url("./assets/fonts/BeaufortforLOL-Regular.ttf");
+}
+
+@font-face {
+  font-family: "anton";
+  src: url("./assets/fonts/Anton-Regular.ttf");
+}
+
+
 ::-webkit-scrollbar {
-  width: 1rem;
+  width: 10px;
   /* height: 2em;  for horizontal scrollbar*/
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #1e2234;
   /* border-radius: 100vw; */
   /* margin-block: .5em; */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8b68ac;
-  border: 0.25em solid #472f5e;
+  background: #9d9ba0;
+  // border: 0.2em solid #472f5e;
   border-radius: 100vw;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #a297ac;
 }
-
 
 
 @mixin breakpoints($point) {

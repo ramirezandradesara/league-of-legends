@@ -1,4 +1,10 @@
+@import '../../../index.scss';
+
 .champs_grid {
+  padding-top: 92px;
+  @include breakpoints(sm){
+    padding-top: 70px;
+  }
   margin-top: 20px;
   margin-bottom: 20px;
   max-width: 80%;
@@ -10,6 +16,4 @@
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   grid-column-gap: 40px;
   grid-row-gap: 80px;
-
-
 }
