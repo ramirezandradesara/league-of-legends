@@ -18,19 +18,19 @@ function ChampsGrid(): JSX.Element {
   }, [dispatch])
 
   return (
-      <ul className="champs_grid">
-        {champs.map(c => {
-          return (
-              <CardChamp
-                key={c.id}
-                id={c.id}
-                image={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${c.id}_0.jpg`}
-                title={c.title}
-                tags={c.tags}
-              />
-          )
-        })}
-      </ul>
+    <ul className="champs_grid">
+      {champs.map(c => {
+        return (
+          <CardChamp
+            key={c.id}
+            id={c.id}
+            image={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${c.id}_0.jpg`}
+            title={c.title}
+            tags={c.tags}
+          />
+        )
+      })}
+    </ul>
   )
 }
 

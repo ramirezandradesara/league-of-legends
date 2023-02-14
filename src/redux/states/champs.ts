@@ -1,14 +1,16 @@
+import { createSlice } from "@reduxjs/toolkit";
+import { IChamps } from "../../types/champs.types";
 
-import { createSlice } from '@reduxjs/toolkit';
+const initialState: IChamps[] = [];
 
 export const champSlice = createSlice({
-  name: 'people',
-  initialState: [],
+  name: "people",
+  initialState: initialState,
   reducers: {
     setChamps: (state, action) => {
-      return state = action.payload
-    }
-  }
+      return (state = action.payload);
+    },
+  },
 });
 
 export const { setChamps } = champSlice.actions;

@@ -1,12 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 import { IChamps } from '../types/champs.types';
-import { IFavs } from '../types/favs.types';
 import { favoritesSlice, champSlice } from './states';
 
 export interface AppStore {
   champs: IChamps[];
-  favorites: IFavs[];
+  favorites: IChamps[];
 }
 
 export const store = configureStore<AppStore>({
