@@ -1,14 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { LocalStorageTypes } from "../../models/localstorage";
 import { IChamps } from "../../types/champs.types";
+import {
+  getLocalStorage,
+  setLocalStorage,
+} from "../../utilities/localstorage.utility";
 
 const initialState: IChamps[] = [];
 
 export const champSlice = createSlice({
   name: "people",
-  initialState: initialState,
+  initialState: getLocalStorage(LocalStorageTypes.PEOPLE)
+    ? JSON.parse(getLocalStorage(LocalStorageTypes.PEOPLE) as string)
+    : initialState,
   reducers: {
     setChamps: (state, action) => {
-      return (state = action.payload);
+      setLocalStorage(LocalStorageTypes.PEOPLE, state);
+      return action.payload;
     },
   },
 });

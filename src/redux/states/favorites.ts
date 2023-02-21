@@ -1,23 +1,28 @@
 import { createSlice, current } from "@reduxjs/toolkit";
+import { LocalStorageTypes } from "../../models/localstorage";
 import { IChamps } from "../../types/champs.types";
+import {
+  getLocalStorage,
+  setLocalStorage,
+} from "../../utilities/localstorage.utility";
 
 const initialState: IChamps[] = [];
 
 export const favoritesSlice = createSlice({
   name: "favorites",
-  initialState: localStorage.getItem("FAVORITES")
-    ? JSON.parse(localStorage.getItem("FAVORITES"))
+  initialState: getLocalStorage(LocalStorageTypes.FAVORITES)
+    ? JSON.parse(getLocalStorage(LocalStorageTypes.FAVORITES) as string)
     : initialState,
   reducers: {
     addFavorite: (action) => {
-      localStorage.setItem("FAVORITES", JSON.stringify(action.payload));
+      setLocalStorage(LocalStorageTypes.FAVORITES, action.payload);
       return action.payload;
     },
     removeFavorite: (state, action) => {
       const filteredState = current(state).filter(
         (p: IChamps) => p.id !== action.payload.id
       );
-      localStorage.setItem("FAVORITES", filteredState);
+      setLocalStorage(LocalStorageTypes.FAVORITES, filteredState);
       return filteredState;
     },
   },
