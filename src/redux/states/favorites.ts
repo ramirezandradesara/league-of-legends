@@ -1,10 +1,10 @@
 import { createSlice, current } from "@reduxjs/toolkit";
-import { LocalStorageTypes } from "../../models/localstorage";
+import { LocalStorageTypes } from "../../types/localstorage";
 import { IChamps } from "../../types/champs.types";
 import {
   getLocalStorage,
   setLocalStorage,
-} from "../../utilities/localstorage.utility";
+} from "../../helpers/localstorage.utility";
 
 const initialState: IChamps[] = [];
 

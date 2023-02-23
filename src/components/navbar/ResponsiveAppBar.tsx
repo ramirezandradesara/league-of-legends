@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useNavigate } from 'react-router-dom'
 
-const pages = ['favorites', 'summoners'];
+const pages = ['favorites'];
 
 /**
  * @returns {JSX.Element}
