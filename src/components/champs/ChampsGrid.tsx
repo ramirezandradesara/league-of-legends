@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import { getChamps } from '../../../service/getChamps'
+import { getChamps } from '../../service/getChamps'
 import { useDispatch, useSelector } from 'react-redux';
-import { setChamps } from '../../../redux/states';
-import { AppDispatch, AppStore } from '../../../redux/store';
-import CardChamp from '../Card/CardChamp';
-import './ChampsGrid.scss'
+import { setChamps } from '../../redux/states';
+import { AppDispatch, AppStore } from '../../redux/store';
+import CardChamp from './CardChamp';
+import 'styles/ChampsGrid.scss'
 
 function ChampsGrid(): JSX.Element {
   const dispatch = useDispatch<AppDispatch>();

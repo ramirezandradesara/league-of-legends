@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+        "styles/*": [
+            "/styles/*"
+        ]
+    },
     "target": "es5",
     "lib": [
       "dom",

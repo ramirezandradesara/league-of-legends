@@ -1,5 +1,5 @@
-import ChampsGrid from '../../components/champs/Grid/ChampsGrid'
-import './Home.scss'
+import ChampsGrid from '../../components/champs/ChampsGrid'
+import 'styles/Home.scss'
 
 function Home() {
 

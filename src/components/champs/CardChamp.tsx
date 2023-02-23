@@ -1,13 +1,13 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { AppStore } from '../../../redux/store'
-import { IChamps } from '../../../types/champs.types'
-import './CardChamp.scss'
+import { AppStore } from '../../redux/store'
+import { IChamps } from '../../types/champs.types'
+import 'styles/CardChamp.scss'
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
 import Tooltip from '@mui/material/Tooltip';
-import { splitName } from '../../../helpers/splitName'
-import { addFavorite, removeFavorite } from '../../../redux/states'
+import { splitName } from '../../helpers/splitName'
+import { addFavorite, removeFavorite } from '../../redux/states'
 
 /**
  * Component that display the card with the information of the champion
