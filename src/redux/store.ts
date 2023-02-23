@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import { IChamps } from '../types/champs.types';
+import { IChamps } from 'types/champs.types';
 import { favoritesSlice, champSlice } from './states';
 
 export interface AppStore {

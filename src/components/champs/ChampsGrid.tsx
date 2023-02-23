@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import { getChamps } from '../../service/getChamps'
+import { getChamps } from 'service/getChamps'
 import { useDispatch, useSelector } from 'react-redux';
-import { setChamps } from '../../redux/states';
-import { AppDispatch, AppStore } from '../../redux/store';
-import CardChamp from './CardChamp';
+import { setChamps } from 'redux/states';
+import { AppDispatch, AppStore } from 'redux/store';
+import CardChamp from 'components/champs/CardChamp';
 import 'styles/ChampsGrid.scss'
 
 function ChampsGrid(): JSX.Element {

@@ -1,8 +1,8 @@
 import React from 'react'
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai'
-import { AppDispatch, AppStore } from '../../redux/store';
+import { AppDispatch, AppStore } from 'redux/store';
 import { useDispatch, useSelector } from 'react-redux';
-import { addFavorite, removeFavorite } from '../../redux/states';
+import { addFavorite, removeFavorite } from 'redux/states';
 
 
 function FavButton({ id }: { id: string }) {

@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import 'styles/App.scss';
-import ResponsiveAppBar from './components/navbar/ResponsiveAppBar';
+import ResponsiveAppBar from 'components/navbar/ResponsiveAppBar';
 import Favorites from './pages/favorites/Favorites';
 import Home from './pages/home/Home';
 

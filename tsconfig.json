@@ -2,9 +2,27 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-        "styles/*": [
-            "/styles/*"
-        ]
+      "components/*": [
+        "components/*"
+      ],
+      "helpers/*": [
+        "helpers/*"
+      ],
+      "pages/*": [
+        "pages/*"
+      ],
+      "redux/*": [
+        "redux/*"
+      ],
+      "service/*": [
+        "service/*"
+      ],
+      "styles/*": [
+        "styles/*"
+      ],
+      "types/*": [
+        "types/*"
+      ],
     },
     "target": "es5",
     "lib": [
