@@ -16,18 +16,17 @@ function CardChamp({ id, image, title, tags }: IChamps): JSX.Element {
 
     const dispatch = useDispatch();
     const favorites = useSelector((store: AppStore) => store.favorites);
-    const champs  = useSelector((store: AppStore) => store.champs)
+    const champs = useSelector((store: AppStore) => store.champs)
 
-    const findFav = favorites.find(fav => fav.id === id);
-    const filterPerson = champs.filter(p => p.id === id);
+    const findFav = favorites?.find(fav => fav.id === id);
+    const filterPerson = champs?.find(p => p.id === id);
 
     function manageFavorites() {
-        console.log(filterPerson);
-        
-        !findFav
-            // ? dispatch(addFavorite(filterPerson))
-            ? dispatch(addFavorite())
-            : dispatch(removeFavorite(filterPerson))
+        if (findFav) {
+            dispatch(removeFavorite(filterPerson))
+        } else {
+            dispatch(addFavorite(filterPerson))
+        }
     }
 
     return (
@@ -37,7 +36,7 @@ function CardChamp({ id, image, title, tags }: IChamps): JSX.Element {
                     <img src={image} alt={image} />
                     <button
                         aria-label="add to favorites"
-                        // onClick={() => manageFavorites()}
+                        onClick={() => manageFavorites()}
                     >
                         {!findFav
                             ? <AiOutlineHeart className='fav-icon' />

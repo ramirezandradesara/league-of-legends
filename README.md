@@ -1,1 +1,1 @@
-Deploy: https://league-of-legends-site.netlify.app/
+Deploy: https://poro-gank.netlify.app/
