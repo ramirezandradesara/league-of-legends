@@ -1,4 +1,3 @@
-import React from 'react'
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai'
 import { AppStore } from 'redux/store';
 import { useDispatch, useSelector } from 'react-redux';

@@ -1,13 +1,8 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { AppStore } from 'redux/store'
 import { IChamps } from 'types/champs.types'
 import 'styles/CardChamp.scss'
-import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
 import Tooltip from '@mui/material/Tooltip';
 import { splitName } from 'helpers/splitName'
-import { addFavorite, removeFavorite } from 'redux/states'
 import FavButton from './FavButton'
 
 /**
@@ -17,7 +12,7 @@ function CardChamp({ id, image, title, tags }: IChamps): JSX.Element {
     return (
         <li key={id} className='card_champ'>
             <div className='card_champ_img'>
-                <Link to={`/${id}`} className='card_champ_link'>
+                <Link to={`/${id}`} className='card_champ_link' id={id}>
                     <img src={image} alt={image} />
                 </Link>
                 <FavButton id={id} />

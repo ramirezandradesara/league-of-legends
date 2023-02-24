@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { getChamps } from 'service/getChamps'
+import { useEffect } from 'react'
+import { getChamps } from 'service/getAllChamps'
 import { useDispatch, useSelector } from 'react-redux';
 import { setChamps } from 'redux/states';
 import { AppDispatch, AppStore } from 'redux/store';
