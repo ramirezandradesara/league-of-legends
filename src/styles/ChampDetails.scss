@@ -1,0 +1,34 @@
+.champ_details {
+    background-color: #1e2234;
+    margin-top: 50px;
+    width: 90%;
+    min-height: calc(100vh - 92px);
+    justify-content: center;
+
+    .champ_details_main {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        width: 100%;
+        height: 530px;
+        background-size: cover;
+        object-fit: cover;
+        background-position: 50% 0%;
+        background-repeat: no-repeat;
+
+        .champ_details_main_title {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;           
+            // height: 100px;
+            background: linear-gradient(180deg, rgba(13, 17, 34, 0) 0%, #1e2234 100%);
+
+            div{
+                font-family: "bold-lol", cursive;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
