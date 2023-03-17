@@ -1,11 +1,14 @@
 .champ_details {
+    display: flex;
     background-color: #1e2234;
-    margin-top: 50px;
+    margin-top: 65px;
     width: 90%;
     min-height: calc(100vh - 92px);
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
 
-    .champ_details_main {
+    &_main {
         display: flex;
         justify-content: center;
         align-items: end;
@@ -16,19 +19,57 @@
         background-position: 50% 0%;
         background-repeat: no-repeat;
 
-        .champ_details_main_title {
+        &_title {
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;           
+            align-items: center;
             // height: 100px;
             background: linear-gradient(180deg, rgba(13, 17, 34, 0) 0%, #1e2234 100%);
 
-            div{
+            div {
                 font-family: "bold-lol", cursive;
                 text-transform: uppercase;
             }
         }
+    }
+
+    &_info {
+        width: 85%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+        border: 1px solid #B29E9E;
+        font-family: "bold-lol", cursive;
+        font-size: 24px;
+        background-color: #B29E9E;
+
+        &_lore {
+            font-family: "bold-lol", cursive;
+            padding: 20px 30px;
+            background-color: #1e2234;
+
+            &_p {
+                margin-top: 25px;
+                font-family: "regular-lol", cursive;
+                font-size: 16px;
+
+                button {
+                    margin-left: 2px;
+                    color: #dab257;
+                    font-size: 11px;
+                    border: none;
+                    background: #1e2234;
+                }
+            }
+        }
+
+        &_spells {
+            font-family: "bold-lol", cursive;
+            padding: 20px 30px;
+            background-color: #1e2234;
+        }
+
     }
 }
