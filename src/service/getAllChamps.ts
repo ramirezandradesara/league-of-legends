@@ -1,10 +1,9 @@
 import axios from "axios";
+import { allChampsApi } from "helpers/apis";
 
 export const getChamps = async () => {
   try {
-    const response = await axios.get(
-      `https://ddragon.leagueoflegends.com/cdn/12.13.1/data/en_US/champion.json`
-    );
+    const response = await axios.get(allChampsApi);
     const results = await response.data.data;
     return results;
   } catch (error) {
