@@ -27,19 +27,20 @@
             align-items: center;
             background: linear-gradient(180deg, rgba(13, 17, 34, 0) 0%, #1e2234 100%);
 
-            h1{
+            h1 {
                 font-size: 80px;
                 font-family: "bold-lol", cursive;
                 text-transform: uppercase;
             }
-            h2{
+
+            h2 {
                 font-family: "bold-lol", cursive;
                 text-transform: uppercase;
             }
 
-            &_tags{
+            &_tags {
                 width: 72%;
-                height: 2%; 
+                height: 2%;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
@@ -68,7 +69,7 @@
             }
 
             &_p {
-                
+
                 font-family: "regular-lol", cursive;
                 font-size: 16px;
 
@@ -90,6 +91,21 @@
             h3 {
                 font-family: "bold-lol", cursive;
                 margin-bottom: 25px;
+            }
+
+            img {
+                cursor: pointer;
+            }
+
+            .css-9n7c9l-MuiAvatar-root {
+                width: 55px;
+                height: 55px;
+            }
+
+            .spells-description {
+                margin-top: 1rem;
+                font-family: "regular-lol", cursive;
+                font-size: 16px;
             }
 
         }

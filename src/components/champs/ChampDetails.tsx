@@ -1,5 +1,5 @@
 import { horizontalImageChamp } from 'helpers/apis';
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import { Tooltip } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { getChampData } from 'service/getChampData'
@@ -9,6 +9,7 @@ import Spells from './Spells';
 
 function ChampDetails() {
   const [champData, setChampData] = useState([])
+  console.log("🚀 ~ file: ChampDetails.tsx:12 ~ ChampDetails ~ champData:", champData[0]?.passive?.description)
   const { id } = useParams();
   const [seeMore, setSeeMore] = useState(false)
 
@@ -80,6 +81,11 @@ function ChampDetails() {
               spellW={champData[0]?.spells[1]?.image?.full}
               spellE={champData[0]?.spells[2]?.image?.full}
               spellR={champData[0]?.spells[3]?.image?.full}
+              descriptionP={champData[0]?.passive?.description}
+              descriptionQ={champData[0]?.spells[0]?.description}
+              descriptionW={champData[0]?.spells[1]?.description}
+              descriptionE={champData[0]?.spells[2]?.description}
+              descriptionR={champData[0]?.spells[3]?.description}
             />
           </div>
         </div>
