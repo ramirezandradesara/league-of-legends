@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useNavigate } from 'react-router-dom'
 
-const pages = ['favorites'];
+const pages = ['champions','favorites'];
 
 /**
  * @returns {JSX.Element}
@@ -76,7 +76,7 @@ function ResponsiveAppBar() {
                             sx={{ backgroundColor: "#31385588", display: { xs: 'block', md: 'none' } }}>
                             {pages.map((page) => (
                                 <MenuItem
-                                    sx={{ backgroundColor: "#1e2234", '&:hover': { backgroundColor: '#4a5483' } }}
+                                    sx={{  '&:hover': { backgroundColor: '#b6b4b4' } }}
                                     key={page}
                                     onClick={() => { handleCloseNavMenu(); navegador(`/${page}`) }}>
                                     <Typography
@@ -86,6 +86,7 @@ function ResponsiveAppBar() {
                                         sx={{
                                             fontFamily: "bold-lol",
                                             textTransform: 'capitalize',
+                                            color: '#1a1a1adf'
                                         }}>
                                         {page}
                                     </Typography>
@@ -106,7 +107,7 @@ function ResponsiveAppBar() {
                             flexGrow: 1,
                             fontWeight: 700,
                             letterSpacing: '.3rem',
-                            color: 'inherit',
+                            // color: 'inherit',
                             textDecoration: 'none',
                             fontFamily: 'Arial'
                         }}>

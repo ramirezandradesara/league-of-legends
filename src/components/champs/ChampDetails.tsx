@@ -9,7 +9,6 @@ import Spells from './Spells';
 
 function ChampDetails() {
   const [champData, setChampData] = useState([])
-  console.log("🚀 ~ file: ChampDetails.tsx:12 ~ ChampDetails ~ champData:", champData[0]?.passive?.description)
   const { id } = useParams();
   const [seeMore, setSeeMore] = useState(false)
 
@@ -45,33 +44,35 @@ function ChampDetails() {
                       src={`/tags/${tag}.png`}
                       alt={`${id + tag}`}
                       key={`${id + tag}`}
-                    // title={`${tag}`}
-                    />
-                  </Tooltip>
-                )
-              })} */}
+                      // title={`${tag}`}
+                      />
+                      </Tooltip>
+                      )
+                    })} */}
             </div>
           </div>
         </div>
         <div className='champ_details_info'>
           <div className='champ_details_info_lore'>
             <h3>LORE</h3>
-            {!seeMore ?
-              (<p className='champ_details_info_lore_p'>
-                {champData[0]?.blurb}
-                <button onClick={handleSeeMore}>
-                  SEE MORE
-                </button>
-              </p>)
-              : (
-                <p className='champ_details_info_lore_p'>
+            <p className='champ_details_info_lore_p'>
+              {!seeMore
+                ?
+                (<>
+                  {champData[0]?.blurb}
+                  <button onClick={handleSeeMore}>
+                    SEE MORE
+                  </button>
+                </>)
+                :
+                (<>
                   {champData[0]?.lore}
                   <button onClick={handleSeeMore}>
                     SEE LESS
                   </button>
-                </p>
-              )
-            }
+                </>)
+              }
+            </p>
           </div>
           <div className='champ_details_info_spells'>
             <h3>SPELLS</h3>
@@ -86,6 +87,11 @@ function ChampDetails() {
               descriptionW={champData[0]?.spells[1]?.description}
               descriptionE={champData[0]?.spells[2]?.description}
               descriptionR={champData[0]?.spells[3]?.description}
+              passiveName={champData[0]?.passive?.name}
+              nameQ={champData[0]?.spells[0]?.name}
+              nameW={champData[0]?.spells[1]?.name}
+              nameE={champData[0]?.spells[2]?.name}
+              nameR={champData[0]?.spells[3]?.name}
             />
           </div>
         </div>

@@ -14,7 +14,7 @@ function Favorites() {
           <img src='/tags/poro.png' alt="no favorites" />
           <h2>One of them must be your favorite</h2>
           <p>
-            Let's search them in the <Link to='/'>home page</Link>.
+            Find them in the <Link to='/'>home page</Link>.
           </p>
         </div>
         : <ul className="champs_grid">

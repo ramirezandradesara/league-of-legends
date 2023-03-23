@@ -12,7 +12,7 @@ function CardChamp({ id, image, title, tags }: IChamps): JSX.Element {
     return (
         <li key={id} className='card_champ'>
             <div className='card_champ_img'>
-                <Link to={`/${id}`} className='card_champ_link' id={id}>
+                <Link to={`/champions/${id}`} className='card_champ_link' id={id}>
                     <img src={image} alt={image} />
                 </Link>
                 <FavButton id={id} />

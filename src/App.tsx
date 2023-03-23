@@ -12,8 +12,9 @@ function App() {
         <ResponsiveAppBar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/champions" element={<Home />} />
           <Route path="/favorites" element={<Favorites />} />
-          <Route path="/:id" element={<ChampDetails />} />
+          <Route path="/champions/:id" element={<ChampDetails />} />
         </Routes>
       </BrowserRouter>
     </div>
