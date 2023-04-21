@@ -1,3 +1,5 @@
+@import 'styles/index.scss';
+
 .champ_details {
     display: flex;
     background-color: #1e2234;
@@ -7,6 +9,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    @include breakpoints(sm) {
+        min-height: 100%;
+    }
 
     &_main {
         display: flex;
@@ -18,6 +24,10 @@
         object-fit: cover;
         background-position: 50% 0%;
         background-repeat: no-repeat;
+
+        @include breakpoints(sm) {
+            height: 260px;
+        }
 
         &_title {
             width: 100%;
@@ -37,6 +47,17 @@
                 font-family: "bold-lol", cursive;
                 text-transform: uppercase;
             }
+
+            @include breakpoints(sm) {
+                h1 {
+                    font-size: 40px;
+                }
+
+                h2 {
+                    font-size: 18px;
+                }
+            }
+
 
             &_tags {
                 width: 72%;
@@ -59,6 +80,20 @@
         font-size: 24px;
         background-color: #B29E9E;
 
+        @include breakpoints(md) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        @include breakpoints(sm) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 12px;
+            background-color: transparent;
+        }
+
         &_lore {
             padding: 20px 30px;
             background-color: #1e2234;
@@ -66,6 +101,23 @@
             h3 {
                 font-family: "bold-lol", cursive;
                 margin-bottom: 25px;
+            }
+
+            @include breakpoints(md) {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                h3 {
+                    align-self: center;
+                }
+            }
+
+            @include breakpoints(sm) {
+                h3 {
+                    margin-bottom: 13px;
+                    font-size: 20px;
+                }
             }
 
             &_p {
@@ -93,21 +145,57 @@
                 margin-bottom: 25px;
             }
 
+            @include breakpoints(md) {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                h3 {
+                    align-self: center;
+                }
+
+                .css-u10pvi-MuiStack-root {
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+
+            @include breakpoints(sm) {
+                h3 {
+                    margin-bottom: 13px;
+                    font-size: 20px;
+                }
+            }
+
             img {
                 cursor: pointer;
             }
 
             .css-9n7c9l-MuiAvatar-root {
-                width: auto;
-                height: auto;
+                width: 55px;
+                height: 55px;
+
+                @include breakpoints(sm) {
+                    width: 40px;
+                    height: 40px;
+                }
             }
+
+            .css-9n7c9l-MuiAvatar-root>img {
+                width: 100%;
+                height: 100%;
+            }
+
+
 
             .spells-name {
                 margin-top: 1.3rem;
                 font-family: "bold-lol", cursive;
                 text-transform: uppercase;
 
-                &_key{
+                &_key {
                     padding-left: 5px;
                     color: #B29E9E;
                     font-size: 11px;
@@ -116,7 +204,7 @@
 
             .spells-description,
             .spells-description>* {
-                margin-top: 0.5rem;
+                margin-top: 1rem;
                 font-family: "regular-lol", cursive;
                 font-size: 16px;
             }
@@ -124,7 +212,6 @@
             .spells-description>* {
                 color: #dab257;
             }
-
         }
     }
 }
