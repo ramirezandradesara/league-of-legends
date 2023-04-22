@@ -44,19 +44,19 @@ export default function Spells({
   return (
     <>
       <Stack direction="row" spacing={3}>
-        <Avatar sx={{ bgcolor: blue[50] }} variant="rounded">
+        <Avatar sx={{ bgcolor: blue[50] }} variant="rounded" className={currentDescription === descriptionP ? "selected" : 'not_selected' } >
           <img src={`${passiveImage}${passive}`} alt='passive' onClick={() => handleDescription(descriptionP, passiveName, 'PASSIVE')} />
         </Avatar>
-        <Avatar sx={{ bgcolor: blue[50] }} variant="rounded">
+        <Avatar sx={{ bgcolor: blue[50] }} variant="rounded" className={currentDescription === descriptionQ ? "selected" : 'not_selected' } >
           <img src={`${spellsImage}${spellQ}`} alt='spellQ' onClick={() => handleDescription(descriptionQ, nameQ, 'Q')} />
         </Avatar>
-        <Avatar sx={{ bgcolor: blue[50] }} variant="rounded">
+        <Avatar sx={{ bgcolor: blue[50] }} variant="rounded" className={currentDescription === descriptionW ? "selected" : 'not_selected' }>
           <img src={`${spellsImage}${spellW}`} alt='spellW' onClick={() => handleDescription(descriptionW, nameW, 'W')} />
         </Avatar>
-        <Avatar sx={{ bgcolor: blue[50] }} variant="rounded">
+        <Avatar sx={{ bgcolor: blue[50] }} variant="rounded" className={currentDescription === descriptionE ? "selected" : 'not_selected' }>
           <img src={`${spellsImage}${spellE}`} alt='spellE' onClick={() => handleDescription(descriptionE, nameE, 'E')} />
         </Avatar>
-        <Avatar sx={{ bgcolor: blue[50] }} variant="rounded">
+        <Avatar sx={{ bgcolor: blue[50] }} variant="rounded" className={currentDescription === descriptionR ? "selected" : 'not_selected' }>
           <img src={`${spellsImage}${spellR}`} alt='spellR' onClick={() => handleDescription(descriptionR, nameR, 'R')} />
         </Avatar>
       </Stack>

@@ -1,9 +1,7 @@
 @import 'styles/index.scss';
-@import 'animate.css';
 
 .champ_details {
     display: flex;
-    // background-color: #1e2234;
     margin-top: 65px;
     width: 100%;
     min-height: calc(100vh - 92px);
@@ -34,9 +32,9 @@
 
         .fav-icon {
             position: absolute;
-            font-size: 40px;
-            top: 10px;
-            right: 15px;
+            font-size: 30px;
+            top: 20px;
+            right: 25px;
         }
 
         &_title {
@@ -199,6 +197,37 @@
                 }
             }
 
+            // .css-9n7c9l-MuiAvatar-root:hover {
+            //     -webkit-animation: slide-top 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+            //     animation: slide-top 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+            //     transition: all 1.2s ease-in-out;
+            //     -webkit-transition: all 1.2s ease-in-out;
+            // }
+
+            // @-webkit-keyframes slide-top {
+            //     0% {
+            //         -webkit-transform: translateY(0);
+            //         transform: translateY(0);
+            //     }
+
+            //     100% {
+            //         -webkit-transform: translateY(-10px);
+            //         transform: translateY(-10px);
+            //     }
+            // }
+
+            // @keyframes slide-top {
+            //     0% {
+            //         -webkit-transform: translateY(0);
+            //         transform: translateY(0);
+            //     }
+
+            //     100% {
+            //         -webkit-transform: translateY(-10px);
+            //         transform: translateY(-10px);
+            //     }
+            // }
+
             .css-9n7c9l-MuiAvatar-root>img {
                 width: 100%;
                 height: 100%;
@@ -228,5 +257,68 @@
                 color: #dab257;
             }
         }
+    }
+}
+
+.selected{
+    border: 1px solid gold;
+    -webkit-animation: slide-top-selected 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+    animation: slide-top-selected 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+}
+
+
+.not_selected:hover{
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+    animation: slide-top 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+    transition: all 1.2s ease-in-out;
+    -webkit-transition: all 1.2s ease-in-out;
+
+}
+
+@-webkit-keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+}
+
+@-webkit-keyframes slide-top-selected {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slide-top-selected {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
     }
 }
