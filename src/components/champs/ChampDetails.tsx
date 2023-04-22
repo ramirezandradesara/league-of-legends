@@ -1,6 +1,6 @@
 import { horizontalImageChamp } from 'helpers/apis';
 import { useEffect, useState } from 'react'
-import { Tooltip } from 'react-bootstrap';
+import Tooltip from '@mui/material/Tooltip';
 import { useParams } from 'react-router-dom';
 import { getChampData } from 'service/getChampData'
 import 'styles/ChampDetails.scss'
@@ -32,23 +32,22 @@ function ChampDetails() {
     <div className='home'>
       <div className='champ_details'>
         <div className='champ_details_main' style={{ backgroundImage: `url('${horizontalImageChamp}${champData[0]?.id}_0.jpg')` }}>
-          {/* <FavButton id={champData[0]?.id} /> */}
+          <FavButton id={champData[0]?.id} />
           <div className='champ_details_main_title'>
             <h2>{champData[0]?.title}</h2>
             <h1>{champData[0]?.id}</h1>
             <div className='champ_details_main_title_tags'>
-              {/* {champData[0]?.tags.map((tag: string) => {
+              {champData[0]?.tags.map((tag: string) => {
                 return (
-                  <Tooltip title={`${tag}`} key={`${tag}`} >
+                  <Tooltip title={`${tag}`} arrow key={`${tag}`} >
                     <img
                       src={`/tags/${tag}.png`}
                       alt={`${id + tag}`}
                       key={`${id + tag}`}
-                      // title={`${tag}`}
-                      />
-                      </Tooltip>
-                      )
-                    })} */}
+                    />
+                  </Tooltip>
+                )
+              })}
             </div>
           </div>
         </div>
@@ -56,22 +55,10 @@ function ChampDetails() {
           <div className='champ_details_info_lore'>
             <h3>LORE</h3>
             <p className='champ_details_info_lore_p'>
-              {!seeMore
-                ?
-                (<>
-                  {champData[0]?.blurb}
-                  <button onClick={handleSeeMore}>
-                    SEE MORE
-                  </button>
-                </>)
-                :
-                (<>
-                  {champData[0]?.lore}
-                  <button onClick={handleSeeMore}>
-                    SEE LESS
-                  </button>
-                </>)
-              }
+              {!seeMore ? champData[0]?.blurb : champData[0]?.lore}
+              <button onClick={handleSeeMore}>
+                {!seeMore ? 'SEE MORE' : 'SEE LESS'}
+              </button>
             </p>
           </div>
           <div className='champ_details_info_spells'>
