@@ -1,8 +1,15 @@
+@import 'styles/index.scss';
+
 .card_champ {
-    border-radius: 10px;
     min-width: 200px;
+    height: auto;
     position: relative;
     clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+
+    // @include breakpoints(sm) {
+    //     min-width: 150px;
+    //     min-height: auto;
+    // }
 
     &_link {
         width: 100%;
@@ -10,10 +17,14 @@
     }
 
     &_img {
-        height: 350px;
+        height: 360px;
         object-fit: cover;
         overflow: hidden;
         position: relative;
+
+        // @include breakpoints(sm) {
+        //     height: auto;
+        // }
 
         img {
             width: 100%;

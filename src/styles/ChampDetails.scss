@@ -11,6 +11,7 @@
 
     @include breakpoints(sm) {
         min-height: 100%;
+        margin-top: 55px;
     }
 
     &_main {
@@ -23,11 +24,12 @@
         object-fit: cover;
         background-position: 50% 0%;
         background-repeat: no-repeat;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         position: relative;
 
         @include breakpoints(sm) {
             height: 260px;
+            margin-bottom: 0px;
         }
 
         .fav-icon {
@@ -72,12 +74,17 @@
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
+                margin: 5px;
             }
 
             div>img {
                 margin: 0px 10px;
                 height: 45px;
                 width: auto;
+
+                @include breakpoints(sm) {
+                    height: 25px;
+                }
             }
 
         }
@@ -229,14 +236,22 @@
     }
 }
 
-.selected{
+.selected {
     border: 1px solid gold;
     -webkit-animation: slide-top-selected 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
     animation: slide-top-selected 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+
+    @include breakpoints(sm) {
+        -webkit-animation: slide-top 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+        animation: slide-top 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
+        transition: all 1.2s ease-in-out;
+        -webkit-transition: all 1.2s ease-in-out;
+
+    }
 }
 
 
-.not_selected:hover{
+.not_selected:hover {
     -webkit-animation: slide-top 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
     animation: slide-top 0.5s cubic-bezier(0.445, 0.050, 0.550, 0.950) both;
     transition: all 1.2s ease-in-out;
