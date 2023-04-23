@@ -6,7 +6,7 @@
     clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
 
     @include breakpoints(sm) {
-        min-width: auto;
+        // min-width: auto;
         min-height: auto;
     }
 
@@ -22,7 +22,7 @@
         position: relative;
 
         @include breakpoints(sm) {
-            height: auto;
+            // height: auto;
         }
 
         img {

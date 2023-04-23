@@ -1,11 +1,9 @@
 @import 'styles/index.scss';
 
 .champs_grid {
-  // padding-top: 92px;
-  @include breakpoints(sm){
-    // padding-top: 70px;
-    max-width: 90%;
-    grid-column-gap: 10px;
+  @include breakpoints(sm) {
+    max-width: 95%;
+    grid-column-gap: 25px;
     grid-row-gap: 30px;
   }
   max-width: 80%;
