@@ -5,6 +5,7 @@ function Home() {
 
   return (
     <div className='home'>
+      <h1 className='home_title'>Champions</h1>
       <ChampsGrid />
     </div>
   )

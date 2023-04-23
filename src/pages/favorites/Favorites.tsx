@@ -9,12 +9,13 @@ function Favorites() {
 
   return (
     <div className='home'>
+      <h1 className='home_title'>Favorites</h1>
       {favorites.length === 0
         ? <div className='no_fav_container'>
           <img src='/tags/poro.png' alt="no favorites" />
           <h2>One of them must be your favorite</h2>
           <p>
-            Find them in the <Link to='/'>home page</Link>.
+            Find them in the <Link to='/'>home page</Link>
           </p>
         </div>
         : <ul className="champs_grid">

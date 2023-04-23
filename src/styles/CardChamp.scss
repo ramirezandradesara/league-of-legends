@@ -2,14 +2,13 @@
 
 .card_champ {
     min-width: 200px;
-    height: auto;
     position: relative;
     clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
 
-    // @include breakpoints(sm) {
-    //     min-width: 150px;
-    //     min-height: auto;
-    // }
+    @include breakpoints(sm) {
+        min-width: auto;
+        min-height: auto;
+    }
 
     &_link {
         width: 100%;
@@ -22,9 +21,9 @@
         overflow: hidden;
         position: relative;
 
-        // @include breakpoints(sm) {
-        //     height: auto;
-        // }
+        @include breakpoints(sm) {
+            height: auto;
+        }
 
         img {
             width: 100%;
@@ -53,7 +52,7 @@
 
 
         &_name {
-            font-family: "bold-lol", cursive;
+            font-family: "bold-lol", 'Times New Roman', Times, serif, cursive;
             font-style: italic;
             letter-spacing: 1px;
             font-size: 20px;
@@ -61,7 +60,7 @@
         }
 
         &_title {
-            font-family: "bold-lol", cursive;
+            font-family: "bold-lol", 'Times New Roman', Times, serif, cursive;
             margin-top: 5px;
             font-size: 12.5px;
             margin-bottom: 10px;

@@ -1,9 +1,19 @@
-.home{
+.home {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     max-width: 100%;
     padding-bottom: 40px;
     // min-height: 100vh;
     // margin: 0px 20px 0px 0px;
+
+    &_title {
+        margin-top: 90px;
+        margin-bottom: 50px;
+        font-family: "bold-lol", 'Times New Roman', Times, serif, cursive;
+        font-style: italic;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
 }
