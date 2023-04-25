@@ -6,7 +6,7 @@ import { getChampData } from 'service/getChampData'
 import 'styles/ChampDetails.scss'
 import FavButton from './FavButton';
 import Spells from './Spells';
-import { SwiperSkins } from 'components/Swiper';
+import { SwiperSkins } from 'components/swiper/Swiper';
 
 function ChampDetails() {
   const [champData, setChampData] = useState([])
