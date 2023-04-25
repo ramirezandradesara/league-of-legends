@@ -242,14 +242,17 @@
             }
         }
 
-        &_skins{
-            grid-area: 2 / 1 / 3 / 3;  
+        &_skins {
+            grid-area: 2 / 1 / 3 / 3;
             padding: 20px 30px;
-            background-color: #1e2234;
 
             h3 {
                 font-family: "bold-lol", cursive;
-                margin-bottom: 25px;
+                margin-bottom: 13px;
+
+                @include breakpoints(sm) {
+                    font-size: 20px;
+                }
             }
         }
     }

@@ -30,6 +30,6 @@
 
     @include breakpoints(sm) {
         width: 70%;
-        min-height: calc(100vh - 138px);
+        // min-height: calc(100vh - 138px);
     }
 }

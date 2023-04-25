@@ -5,14 +5,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // import "swiper/css";
 import "swiper/css/effect-fade";
 // import "swiper/css/navigation";
-import "swiper/css/pagination";
+// import "swiper/css/pagination";
 import "./Swiper.scss";
 
 // import required modules
 import { EffectFade, Navigation, Pagination, Parallax } from "swiper";
 
 function SwiperSkins({ skins, champion }: { skins: any, champion: string }) {
-    console.log("🚀 ~ file: Swiper.tsx:15 ~ SwiperSkins ~ skins:", skins)
     return (
         <>
             <Swiper
