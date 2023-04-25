@@ -12,7 +12,6 @@ import "styles/Swiper.scss";
 import { EffectFade, Navigation, Pagination, Parallax } from "swiper";
 
 function SwiperSkins({ skins, champion }: { skins: any, champion: string }) {
-    console.log("🚀 ~ file: Swiper.tsx:15 ~ SwiperSkins ~ skins:", skins)
     return (
         <>
             <Swiper
