@@ -6,11 +6,12 @@ import { getChampData } from 'service/getChampData'
 import 'styles/ChampDetails.scss'
 import FavButton from './FavButton';
 import Spells from './Spells';
+import { SwiperSkins } from 'components/Swiper';
 
 function ChampDetails() {
   const [champData, setChampData] = useState([])
-  const { id } = useParams();
-  const [seeMore, setSeeMore] = useState(false)
+  const { id }: { id?: string } = useParams();
+  const [seeMore, setSeeMore] = useState<boolean>(false)
 
   useEffect(() => {
     getChampData(id).then(data => setChampData(Object.values(data)))
@@ -79,6 +80,13 @@ function ChampDetails() {
               nameW={champData[0]?.spells[1]?.name}
               nameE={champData[0]?.spells[2]?.name}
               nameR={champData[0]?.spells[3]?.name}
+            />
+          </div>
+          <div className='champ_details_info_skins'>
+            <h3>SKINS</h3>
+            <SwiperSkins 
+            champion={champData[0]?.id}
+            skins={champData[0]?.skins}
             />
           </div>
         </div>

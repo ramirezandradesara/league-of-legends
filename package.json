@@ -26,6 +26,7 @@
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1",
     "sass": "^1.57.1",
+    "swiper": "^9.2.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
