@@ -1,21 +1,11 @@
-import { useEffect } from 'react'
-import { getChamps } from 'service/getAllChamps'
-import { useDispatch, useSelector } from 'react-redux';
-import { setChamps } from 'redux/states';
-import { AppDispatch, AppStore } from 'redux/store';
+
 import CardChamp from 'components/champs/CardChamp';
+import { useSelector } from 'react-redux';
+import { AppStore } from 'redux/store';
 import 'styles/ChampsGrid.scss'
 
 function ChampsGrid(): JSX.Element {
-  const dispatch = useDispatch<AppDispatch>();
   const champs = useSelector((state: AppStore) => state.champs)
-
-  /**
-   * When the components renders, it gets the champions of the API and set them in the champs state
-   */
-  useEffect(() => {
-    getChamps().then(data => dispatch(setChamps(Object.values(data))))
-  }, [dispatch])
 
   return (
     <ul className="champs_grid">
