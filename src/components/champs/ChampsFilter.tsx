@@ -7,6 +7,10 @@ import { setChamps } from 'redux/states';
 import { AppDispatch } from 'redux/store';
 import { getChamps } from 'service/getAllChamps'
 import { styled } from '@mui/material/styles';
+import { TextField } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
+import InputAdornment from '@mui/material/InputAdornment';
+import OutlinedInput from '@mui/material/OutlinedInput';
 
 const tags = ["All", "Support", "Tank", "Fighter", "Mage", "Assassin", "Marksman"]
 
@@ -35,20 +39,34 @@ export function ChampsFilter() {
   });
 
   return (
-    <Box sx={{ marginBottom: '35px' }}>
+    <Box sx={{ marginBottom: '35px', width: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+      <Box sx={{ display: 'flex', flexWrap: "wrap",alignItems: 'flex-end', justifyContent: 'center', marginBottom: '20px', width: '100%', }}>
+        <OutlinedInput
+          id="outlined-adornment-password"
+          placeholder='Search champion...'
+          type='text'
+          sx={{ color: 'white', fontFamily: "bold-lol", border: '1px solid white', width: { md: '50%', xs: '80%' } }}
+          startAdornment={
+            <InputAdornment position="start">
+              <SearchIcon style={{ color: '#000' }} />
+            </InputAdornment>
+          }
+        />
+      </Box>
+
       <StyledButtonGroup variant="text" aria-label="text button group" size="large"
         sx={{
           display: 'flex',
           flexWrap: "wrap",
           justifyContent: 'center',
-        }}>
+        }}
+      >
         {tags.map(tag => (
           <Button onClick={() => filterByTag(tag)}
             key={tag} sx={{
               color: '#fff',
               borderColor: '#fff',
               fontFamily: "bold-lol",
-              minWidth: '200px',
             }}>
             {tag}
           </Button>
