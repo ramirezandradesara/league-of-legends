@@ -9,10 +9,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import KeyboardOutlinedIcon from '@mui/icons-material/KeyboardOutlined';
 import { useNavigate } from 'react-router-dom'
 
-const pages = ['champions','favorites'];
+const pages = ['champions', 'favorites'];
 
 /**
  * @returns {JSX.Element}
@@ -36,22 +36,20 @@ function ResponsiveAppBar() {
         <AppBar position="fixed" sx={{ backgroundColor: "#1a1a1adf" }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <KeyboardOutlinedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
                     <Typography
                         variant="h6"
                         noWrap
-                        // component="a"
-                        // href="/"
                         onClick={() => navegador('/')}
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
                             fontWeight: 700,
                             letterSpacing: '.3rem',
                             color: 'inherit',
                             textDecoration: 'none',
-                            cursor: 'pointer'
+                            cursor: 'pointer',
+                            fontFamily: "regular-lol",
                         }}>
                         PORO.GANK
                     </Typography>
@@ -73,16 +71,14 @@ function ResponsiveAppBar() {
                             transformOrigin={{ vertical: 'top', horizontal: 'left' }}
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
-                            sx={{ backgroundColor: "#31385588", display: { xs: 'block', md: 'none' } }}>
+                            sx={{ backgroundColor: "#18181a8d", display: { xs: 'block', md: 'none' } }}>
                             {pages.map((page) => (
                                 <MenuItem
-                                    sx={{  '&:hover': { backgroundColor: '#b6b4b4' } }}
+                                    sx={{ '&:hover': { backgroundColor: '#b6b4b4' } }}
                                     key={page}
                                     onClick={() => { handleCloseNavMenu(); navegador(`/${page}`) }}>
                                     <Typography
                                         textAlign="center"
-                                        // component="a"
-                                        // href={`/${page}`}
                                         sx={{
                                             fontFamily: "bold-lol",
                                             textTransform: 'capitalize',
@@ -95,7 +91,7 @@ function ResponsiveAppBar() {
                         </Menu>
                     </Box>
 
-                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    <KeyboardOutlinedIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
                     <Typography
                         variant="h5"
                         noWrap
@@ -107,9 +103,8 @@ function ResponsiveAppBar() {
                             flexGrow: 1,
                             fontWeight: 700,
                             letterSpacing: '.3rem',
-                            // color: 'inherit',
                             textDecoration: 'none',
-                            fontFamily: 'Arial'
+                            fontFamily: "regular-lol",
                         }}>
                         PORO.GANK
                     </Typography>
@@ -117,8 +112,6 @@ function ResponsiveAppBar() {
                         {pages.map((page) => (
                             <Button
                                 key={page}
-                                // component="a"
-                                // href={`/${page}`}
                                 onClick={() => { handleCloseNavMenu(); navegador(`/${page}`) }}
                                 sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'bold-lol' }}>
                                 {page}

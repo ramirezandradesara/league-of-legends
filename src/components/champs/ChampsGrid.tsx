@@ -12,7 +12,7 @@ function ChampsGrid(): JSX.Element {
       {champs.length === 0
         ? <div className='no_fav_container'>
           <img src="/gifs/blitzcrank.gif" height={200} alt="no results gif" />
-          <h2>No matches found</h2>
+          <h2>No results found</h2>
         </div>
         : <>
           <ul className="champs_grid">
