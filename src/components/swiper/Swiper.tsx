@@ -9,7 +9,7 @@ import "swiper/css/effect-fade";
 import "styles/Swiper.scss";
 
 // import required modules
-import { EffectFade, Navigation, Pagination, Parallax } from "swiper";
+import { Autoplay, EffectFade, Navigation, Pagination, Parallax } from "swiper";
 
 function SwiperSkins({ skins, champion }: { skins: any, champion: string }) {
     return (
@@ -19,11 +19,15 @@ function SwiperSkins({ skins, champion }: { skins: any, champion: string }) {
                 parallax={true}
                 spaceBetween={30}
                 effect={"fade"}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                  }}
                 navigation={true}
                 pagination={{
                     clickable: true,
                 }}
-                modules={[Parallax, EffectFade, Navigation, Pagination]}
+                modules={[Autoplay, Parallax, EffectFade, Navigation, Pagination]}
                 className="mySwiper"
             >
                 {skins?.slice(1).map((skin: any) => {
