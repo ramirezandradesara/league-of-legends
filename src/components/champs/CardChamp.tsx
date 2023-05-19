@@ -3,7 +3,7 @@ import { IChamps } from 'types/champs.types'
 import 'styles/CardChamp.scss'
 import Tooltip from '@mui/material/Tooltip';
 import { splitName } from 'helpers/splitName'
-import FavButton from './FavButton'
+import FavButton from 'components/buttons/FavButton'
 import { useEffect, useRef, useState } from 'react';
 
 /**

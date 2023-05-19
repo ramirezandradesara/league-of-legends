@@ -4,9 +4,10 @@ import Tooltip from '@mui/material/Tooltip';
 import { useParams } from 'react-router-dom';
 import { getChampData } from 'service/getChampData'
 import 'styles/ChampDetails.scss'
-import FavButton from './FavButton';
+import FavButton from 'components/buttons/FavButton';
 import Spells from './Spells';
 import { SwiperSkins } from 'components/swiper/Swiper';
+import BackButton from 'components/buttons/BackButton';
 
 function ChampDetails() {
   const [champData, setChampData] = useState([])
@@ -33,6 +34,7 @@ function ChampDetails() {
     <div className='home'>
       <div className='champ_details'>
         <div className='champ_details_main' style={{ backgroundImage: `url('${horizontalImageChamp}${champData[0]?.id}_0.jpg')` }}>
+          <BackButton />
           <FavButton id={champData[0]?.id} />
           <div className='champ_details_main_title'>
             <h2>{champData[0]?.title}</h2>
@@ -84,9 +86,9 @@ function ChampDetails() {
           </div>
           <div className='champ_details_info_skins'>
             <h3>SKINS</h3>
-            <SwiperSkins 
-            champion={champData[0]?.id}
-            skins={champData[0]?.skins}
+            <SwiperSkins
+              champion={champData[0]?.id}
+              skins={champData[0]?.skins}
             />
           </div>
         </div>
