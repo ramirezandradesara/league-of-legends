@@ -1,7 +1,8 @@
-import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai'
 import { AppStore } from 'redux/store';
 import { useDispatch, useSelector } from 'react-redux';
 import { addFavorite, removeFavorite } from 'redux/states';
+import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 function FavButton({ id }: { id: string }) {
@@ -24,8 +25,8 @@ function FavButton({ id }: { id: string }) {
             onClick={() => manageFavorites()}
         >
             {!findFav
-                ? <AiOutlineHeart className='fav-icon' />
-                : <AiFillHeart className='fav-icon' />
+                ? <FavoriteTwoToneIcon className='fav-icon'/>
+                : <FavoriteIcon className='fav-icon' />
             }
         </button>
     )

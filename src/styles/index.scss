@@ -57,6 +57,9 @@ a {
   background: #a297ac;
 }
 
+.up-arrow-icon {
+  filter: invert(47%) sepia(83%) saturate(5601%) hue-rotate(234deg) brightness(95%) contrast(91%);
+}
 
 @mixin breakpoints($point) {
   // mobile

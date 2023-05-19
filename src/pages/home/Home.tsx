@@ -19,7 +19,7 @@ function Home() {
 
   return (
     <div className='home'>
-      <h1 className='home_title'>Champions</h1>
+      <h1 className='home_title' id="back-to-top-anchor">Champions</h1>
       <ChampsFilter />
       <ChampsGrid />
     </div>

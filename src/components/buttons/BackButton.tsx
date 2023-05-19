@@ -1,12 +1,12 @@
 
-import { IoChevronBackCircleOutline } from 'react-icons/io5'
+import ArrowCircleLeftTwoToneIcon from '@mui/icons-material/ArrowCircleLeftTwoTone';
 import { Link } from 'react-router-dom'
 
 function BackButton() {
     return (
         <Link to="/champions">
             <button>
-                <IoChevronBackCircleOutline className='back-icon' />
+                <ArrowCircleLeftTwoToneIcon className='back-icon' />
             </button>
         </Link>
     )

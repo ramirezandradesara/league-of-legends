@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardOutlinedIcon from '@mui/icons-material/KeyboardOutlined';
 import { useNavigate } from 'react-router-dom'
+import { ScrollTop } from './ScrollTop';
 
 const pages = ['champions', 'favorites'];
 
@@ -120,6 +121,7 @@ function ResponsiveAppBar() {
                     </Box>
                 </Toolbar>
             </Container>
+            <ScrollTop children={undefined} />
         </AppBar>
     );
 }
