@@ -32,6 +32,7 @@ function ChampDetails() {
 
   return (
     <div className='home'>
+      <div id="back-to-top-anchor"></div>
       <div className='champ_details'>
         <div className='champ_details_main' style={{ backgroundImage: `url('${horizontalImageChamp}${champData[0]?.id}_0.jpg')` }}>
           <BackButton />
