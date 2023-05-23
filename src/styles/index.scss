@@ -61,7 +61,12 @@ a {
   filter: invert(47%) sepia(83%) saturate(5601%) hue-rotate(234deg) brightness(95%) contrast(91%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @mixin breakpoints($point) {
+
   // mobile
   @if $point==sm {
     @media (max-width: 768px) {
