@@ -19,8 +19,8 @@ function SwiperSkins({ skins, champion }: { skins: any, champion: string }) {
                 parallax={true}
                 spaceBetween={30}
                 effect={"fade"}
-                slidesPerView={1}
-                loop={true}
+                // slidesPerView={1}
+                // loop={true}
                 autoplay={{
                     delay: 2500,
                     disableOnInteraction: false,
