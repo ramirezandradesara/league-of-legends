@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { getChampData } from 'service/getChampData'
 import 'styles/ChampDetails.scss'
 import FavButton from 'components/buttons/FavButton';
-import Spells from './Spells';
+import Spells from '../../components/champs/Spells';
 import { SwiperSkins } from 'components/swiper/Swiper';
 import BackButton from 'components/buttons/BackButton';
 
